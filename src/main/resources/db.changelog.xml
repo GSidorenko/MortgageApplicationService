@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+    <changeSet author="GSidorenko" id="1">
+        <createTable tableName="Client">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" unique="true"/>
+            </column>
+            <column name="FIRST_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SECOND_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PASSPORT" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BIRTH_DATE" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="GENDER" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SALARY" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREDIT_AMOUNT" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DURATION_IN_MONTHS" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MONTHLY_PAYMENT" type="DOUBLE"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
